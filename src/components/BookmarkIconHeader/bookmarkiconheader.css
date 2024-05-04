@@ -1,0 +1,16 @@
+.bookmarkIconContainer {
+    position: relative;
+}
+.bookmarkIconContainer p {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: rgb(163, 0, 0);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 400;
+    display: grid;
+    place-content: center;
+}

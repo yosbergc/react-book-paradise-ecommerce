@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.secondPart {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.secondPart > * {
+    cursor: pointer;
+}
