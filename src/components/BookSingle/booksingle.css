@@ -1,0 +1,15 @@
+.BookSingleContainer {
+    text-align: left;
+}
+.BookSingleContainer img {
+    max-width: 200px;
+    height: auto;
+}
+.genre {
+    display: inline-block;
+    background-color: rgb(133, 86, 0);
+    font-weight: 600;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
