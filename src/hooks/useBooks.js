@@ -1,9 +1,8 @@
 import React from "react";
 import Ebooks from '../mockups/books.json'
-import { useFilters } from "./useFilters";
 const booksArray = Ebooks.library
-function useBooks() {
-    const {filters, handleGenre, handlePages} = useFilters()
+function useBooks(FilterContext) {
+    const {filters, handleGenre, handlePages} = React.useContext(FilterContext)
     const [books] = React.useState(booksArray);
     const booksGenres = books.map(book => book.book.genre)
     const bookSet = new Set(booksGenres);
