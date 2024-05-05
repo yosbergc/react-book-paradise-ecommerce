@@ -1,0 +1,21 @@
+.hero h2 {
+    font-size: 2rem;
+    margin: 1rem 0px;
+    text-wrap: balance;
+}
+.hero p {
+    font-size: 1.2rem
+}
+.hero img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+}
+@media (min-width: 1200px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+    }
+}

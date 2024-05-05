@@ -4,7 +4,7 @@ import './header.css'
 function Header () {
     return (
         <header>
-            <h2>Book Paradise</h2>
+            <h2>Paraíso del libro</h2>
             <section className="secondPart">
                 <BookmarkIconHeader />
                 <UserLoggedHeader />

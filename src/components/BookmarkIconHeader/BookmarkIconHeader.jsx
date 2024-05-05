@@ -4,7 +4,8 @@ function BookmarkIconHeader () {
     return (
         <section className="bookmarkIconContainer">
             <FaRegBookmark size={25}/>
-            <p>0</p>
+            <p>20
+            </p>
         </section>
     )
 }
