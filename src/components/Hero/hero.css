@@ -1,14 +1,19 @@
+.hero .info-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .hero h2 {
-    font-size: 2rem;
-    margin: 1rem 0px;
+    font-size: 2.5rem;
     text-wrap: balance;
+    font-weight: 700;
 }
 .hero p {
     font-size: 1.2rem
 }
 .hero img {
     width: 100%;
-    max-height: 60vh;
+    max-height: 70vh;
     object-fit: contain;
 }
 @media (min-width: 1200px) {
