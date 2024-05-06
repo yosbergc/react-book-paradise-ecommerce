@@ -8,9 +8,11 @@ function CartProvider({children}) {
     const handleCartVisible = () => {
         setCartVisible(!isCartVisible)
     }
-    const addBookToCart = (book) => {
+    const addBookToCart = (newBook) => {
         const newCart = [...cart]
-        newCart.push(book)
+        const isProductInCard = newCart.some(book => book.book.ISBN === newBook.book.ISBN )
+        if (isProductInCard) return
+        newCart.push(newBook)
         setCart(newCart)
     }
     return <cartContext.Provider
