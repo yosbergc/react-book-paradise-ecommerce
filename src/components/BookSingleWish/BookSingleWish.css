@@ -1,0 +1,22 @@
+.booksingle-wish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.booksingle-wish img{
+    width: auto;
+    height: 300px;
+    object-fit: contain;
+}
+h4 {
+    text-align: center;
+}
+.booksingle-wish button {
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -2,6 +2,7 @@ import './cart.css'
 import { IoIosClose } from "react-icons/io"
 import { cartContext } from '../../context/CartContext'
 import { useContext } from 'react'
+import { BookSingleWish } from '../BookSingleWish/BookSingleWish'
 function CartComponent() {
     const {cart, handleCartVisible} = useContext(cartContext)
     return (
@@ -11,7 +12,11 @@ function CartComponent() {
                 <IoIosClose size={30} onClick={handleCartVisible}/>
             </section>
             <section className='cart-product-list'>
-                {cart.map(book => <p key={book.book.ISBN}>{book.book.title}</p>)}
+                {cart.map(book => <BookSingleWish
+                    key={book.book.ISBN}
+                    bookName={book.book.title}
+                    bookImage={book.book.cover}
+                    />)}
             </section>
         </section>
     )

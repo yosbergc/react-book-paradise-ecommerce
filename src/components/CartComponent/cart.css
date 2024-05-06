@@ -18,3 +18,11 @@
 .up svg {
     cursor: pointer;
 }
+.cart-product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0px;
+    overflow-y: scroll;
+    height: 80vh;
+}
