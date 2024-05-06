@@ -1,3 +1,9 @@
+.bookmark {
+    position: fixed;
+    left: 30px;
+    bottom: 20px;
+    cursor: pointer;
+}
 .bookmarkIconContainer {
     position: relative;
 }

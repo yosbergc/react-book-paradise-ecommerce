@@ -4,6 +4,7 @@ import { Hero } from './components/Hero/Hero'
 import { Books } from './components/Books/Books'
 import { CartComponent } from './components/CartComponent/Cart'
 import { cartContext } from './context/CartContext'
+import { BookmarkIconHeader } from "./components/BookmarkIconHeader/BookmarkIconHeader"
 
 import React from 'react'
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Books />
       {isCartVisible && <CartComponent />}
+      <BookmarkIconHeader />
     </>
   )
 }

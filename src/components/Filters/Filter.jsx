@@ -1,9 +1,15 @@
 import './filter.css'
-function Filters({ handleGenre, handlePages, booksGenres, filters, booksLength }) {
+import { cartContext } from '../../context/CartContext'
+import { useContext } from 'react'
+function Filters({ handleGenre, handlePages, booksGenres, filters, booksFiltered }) {
+    const {cart} = useContext(cartContext)
+    const filteredISBNs = new Set(booksFiltered.map(book => book.book.ISBN));
+    const currentCartFiltered = cart.filter(book => filteredISBNs.has(book.book.ISBN)).length;
 
     return (
         <section className='filters-container'>
-            {booksLength > 0 ? booksLength > 1 ? <p>Hay {booksLength} libros</p> : <p>Hay {booksLength} libro</p> : <p>No hay libros que cumplan con tus parámetros</p>}
+            {booksFiltered.length > 0 ? booksFiltered.length > 1 ? <p>Hay {booksFiltered.length} libros</p> : <p>Hay {booksFiltered.length} libro</p> : <p>No hay libros que cumplan con tus parámetros</p>}
+            <p>De los cuales {currentCartFiltered} están en la lista de lectura</p>
             <h3>Haz uso de los filtros</h3>
             <section>
                 <label htmlFor="genre">Elige el género que deseas</label>
