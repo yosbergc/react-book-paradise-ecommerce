@@ -10,7 +10,7 @@ function useBooks(FilterContext) {
     const booksFiltered = books.filter(book => {
         const genero = filters.genre === 'Todos' || book.book.genre === filters.genre;
         const pages = filters.pages === 0 || book.book.pages >= filters.pages;
-        const query = filters.query === '' || book.book.title.startsWith(filters.query);
+        const query = filters.query === '' || book.book.title.toLowerCase().startsWith(filters.query.toLowerCase());
         return genero && pages && query;
     })
     return {bookGenresFinal, booksFiltered, filters, handleGenre, handlePages}
