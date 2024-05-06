@@ -1,6 +1,6 @@
 function BookSingleWish () {
     return (
-        <section>
+        <section className="booksingle-wish">
             
         </section>
     )
