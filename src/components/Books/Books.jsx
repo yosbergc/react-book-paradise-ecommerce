@@ -1,10 +1,10 @@
 import './books.css'
 import { BookSingle } from '../BookSingle/BookSingle'
 import { Filters } from '../Filters/Filter'
-import { useBooks } from '../../hooks/useBooks'
-import { FilterContext } from '../../context/FilterContext.jsx'
-function Books () {
-    const {bookGenresFinal, booksFiltered, filters, handleGenre, handlePages} = useBooks(FilterContext);
+import { cartContext } from '../../context/CartContext'
+import { useContext } from 'react'
+function Books ({bookGenresFinal, booksFiltered, filters, handleGenre, handlePages}) {
+    const {addBookToCart} = useContext(cartContext)
     return (
         <section className='main-books'>
             <Filters booksGenres={bookGenresFinal} handleGenre={handleGenre} handlePages={handlePages} filters={filters}/>
@@ -16,6 +16,7 @@ function Books () {
                             bookName={book.book.title}
                             bookGenre={book.book.genre}
                             bookInfo={book.book.synopsis}
+                            addBookToCart={() => {addBookToCart(book)}}
                             />
                     })}
             </section>

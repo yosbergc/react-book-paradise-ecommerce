@@ -11,7 +11,7 @@ function CartComponent() {
                 <IoIosClose size={30} onClick={handleCartVisible}/>
             </section>
             <section className='cart-product-list'>
-                {cart.map(product => <p key={product}>{product}</p>)}
+                {cart.map(book => <p key={book.book.ISBN}>{book.book.title}</p>)}
             </section>
         </section>
     )

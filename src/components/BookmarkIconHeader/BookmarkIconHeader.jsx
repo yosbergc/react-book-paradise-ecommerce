@@ -3,11 +3,11 @@ import './bookmarkiconheader.css'
 import { cartContext } from '../../context/CartContext'
 import { useContext } from 'react'
 function BookmarkIconHeader () {
-    const {handleCartVisible} = useContext(cartContext)
+    const {handleCartVisible, cart} = useContext(cartContext)
     return (
         <section className="bookmarkIconContainer" onClick={handleCartVisible}>
             <FaRegBookmark size={25}/>
-            <p>0</p>
+            <p>{cart.length}</p>
         </section>
     )
 }
