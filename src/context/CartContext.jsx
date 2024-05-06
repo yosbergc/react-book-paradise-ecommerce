@@ -15,12 +15,19 @@ function CartProvider({children}) {
         newCart.push(newBook)
         setCart(newCart)
     }
+    const deleteBookofCart = (id) => {
+        const newCart = [...cart]
+        const productIndex = newCart.findIndex(book => book.book.ISBN === id);
+        newCart.splice(productIndex, 1);
+        setCart(newCart)
+    }
     return <cartContext.Provider
     value={{
         cart,
         addBookToCart,
         isCartVisible,
-        handleCartVisible
+        handleCartVisible,
+        deleteBookofCart
     }}>
         {children}
     </cartContext.Provider>
