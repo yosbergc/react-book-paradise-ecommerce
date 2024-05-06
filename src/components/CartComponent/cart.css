@@ -23,6 +23,6 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px 0px;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 80vh;
 }
