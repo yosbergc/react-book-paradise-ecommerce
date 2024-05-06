@@ -1,8 +1,9 @@
 import './filter.css'
-function Filters({ handleGenre, handlePages, booksGenres, filters }) {
+function Filters({ handleGenre, handlePages, booksGenres, filters, booksLength }) {
 
     return (
         <section className='filters-container'>
+            {booksLength > 0 ? booksLength > 1 ? <p>Hay {booksLength} libros</p> : <p>Hay {booksLength} libro</p> : <p>No hay libros que cumplan con tus parámetros</p>}
             <h3>Haz uso de los filtros</h3>
             <section>
                 <label htmlFor="genre">Elige el género que deseas</label>

@@ -12,6 +12,7 @@ function Books () {
             handleGenre={handleGenre}
             handlePages={handlePages}
             filters={filters}
+            booksLength={booksFiltered.length}
             />
             <section className='books-container'>
                 <BookList
